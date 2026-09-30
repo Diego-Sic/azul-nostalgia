@@ -27,8 +27,8 @@ const POEM_STANZAS: Stanza[] = [
     planetName: "The Rose's Glass Dome",
     theme: "rose",
     lines: [
-      "No hay flor en ningún asteroide",
-      "que posea la gracia de tu luz,",
+      "No hay nada en todo el universo",
+      "que sea tan lindo como tu luz,",
       "tan única entre cinco mil rosas,",
       "simplemente por ser tú."
     ],
@@ -39,10 +39,10 @@ const POEM_STANZAS: Stanza[] = [
     planetName: "The Golden Desert",
     theme: "sahara",
     lines: [
-      "Haces que el desierto parezca un jardín",
+      "Haces que cualquier lugar brille",
       "con solo tu forma de mirar,",
-      "como una constelación constante",
-      "que enseña al cielo a brillar."
+      "como una estrella que nunca se apaga",
+      "y enseña al cielo a brillar."
     ],
     illustration: "desert"
   },
@@ -51,10 +51,10 @@ const POEM_STANZAS: Stanza[] = [
     planetName: "The Fox's Secret",
     theme: "fox",
     lines: [
-      "Hay una magia serena en tu presencia,",
-      "algo que el mundo no puede explicar:",
-      "que lo verdaderamente valioso",
-      "solo con el corazón se puede admirar."
+      "Hay algo muy especial en ti",
+      "que nadie puede explicar:",
+      "que lo más bonito que tienes",
+      "con el corazón se puede ver."
     ],
     illustration: "fox"
   }
