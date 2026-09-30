@@ -4,7 +4,6 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 export interface Stanza {
   id: number;
   planetName: string;
-  subtitle: string;
   theme: 'b612' | 'rose' | 'sahara' | 'fox';
   lines: string[];
   illustration: 'b612' | 'rose' | 'desert' | 'fox';
@@ -14,7 +13,6 @@ const POEM_STANZAS: Stanza[] = [
   {
     id: 1,
     planetName: "Asteroid B-612",
-    subtitle: "Stanza I — The Beginning",
     theme: "b612",
     lines: [
       "Lorem ipsum dolor sit amet,",
@@ -27,7 +25,6 @@ const POEM_STANZAS: Stanza[] = [
   {
     id: 2,
     planetName: "The Rose's Glass Dome",
-    subtitle: "Stanza II — The Flower",
     theme: "rose",
     lines: [
       "Ut enim ad minim veniam,",
@@ -40,7 +37,6 @@ const POEM_STANZAS: Stanza[] = [
   {
     id: 3,
     planetName: "The Golden Desert",
-    subtitle: "Stanza III — The Journey",
     theme: "sahara",
     lines: [
       "Duis aute irure dolor in",
@@ -53,7 +49,6 @@ const POEM_STANZAS: Stanza[] = [
   {
     id: 4,
     planetName: "The Fox's Secret",
-    subtitle: "Stanza IV — Taming",
     theme: "fox",
     lines: [
       "Occaecat cupidatat non proident,",
@@ -74,7 +69,7 @@ export const ConstellationPoemViewer: React.FC<ConstellationPoemViewerProps> = (
   const sectionRefs = useRef<(HTMLElement | null)[]>([]);
   const { scrollY } = useScroll();
 
-  // Floating background parallax vector offsets
+  // Parallax vectors drift speed
   const parallaxOffset = useTransform(scrollY, [0, 2000], [0, -180]);
 
   // Observer to update theme as user scrolls past sections
@@ -118,9 +113,6 @@ export const ConstellationPoemViewer: React.FC<ConstellationPoemViewerProps> = (
         <h1 className="text-3xl sm:text-5xl font-serif text-slate-100 tracking-wide font-normal">
           Un Viaje entre las Estrellas
         </h1>
-        <p className="text-slate-400 font-serif italic text-sm sm:text-base max-w-md">
-          Desliza hacia abajo para recorrer las estrofas de este poema celestial.
-        </p>
 
         {/* Scroll Down Indicator */}
         <motion.div
@@ -148,19 +140,19 @@ export const ConstellationPoemViewer: React.FC<ConstellationPoemViewerProps> = (
       </motion.div>
 
       {/* Vertical Stanza Sections */}
-      <div className="w-full flex flex-col space-y-24 sm:space-y-36 my-12">
+      <div className="w-full flex flex-col space-y-20 sm:space-y-32 my-8">
         {POEM_STANZAS.map((stanza, idx) => (
           <section
             key={stanza.id}
             ref={(el) => (sectionRefs.current[idx] = el)}
-            className="w-full min-h-[60vh] flex flex-col items-center justify-center scroll-mt-24"
+            className="w-full min-h-[50vh] flex flex-col items-center justify-center scroll-mt-24"
           >
             <motion.div
               initial={{ opacity: 0, y: 40, scale: 0.95 }}
               whileInView={{ opacity: 1, y: 0, scale: 1 }}
               viewport={{ amount: 0.35, once: false }}
               transition={{ duration: 0.8, ease: 'easeOut' }}
-              className="w-full rounded-3xl p-8 sm:p-12 relative overflow-hidden backdrop-blur-xl bg-slate-900/40 border border-slate-800/80 shadow-[0_0_60px_rgba(0,0,0,0.85)] flex flex-col items-center justify-between text-center transition-all duration-700"
+              className="w-full rounded-3xl p-8 sm:p-12 relative overflow-hidden backdrop-blur-xl bg-slate-900/40 border border-slate-800/80 shadow-[0_0_60px_rgba(0,0,0,0.85)] flex flex-col items-center justify-center text-center transition-all duration-700"
             >
               {/* Subtle Stanza SVG Backdrop Vector */}
               <div className="absolute inset-0 flex items-center justify-center opacity-15 pointer-events-none select-none">
@@ -189,45 +181,26 @@ export const ConstellationPoemViewer: React.FC<ConstellationPoemViewerProps> = (
                 )}
               </div>
 
-              {/* Planet Title Tag */}
-              <span className="text-amber-400 font-mono text-xs uppercase tracking-widest mb-3 bg-amber-400/10 px-3 py-1 rounded-full border border-amber-400/20">
-                {stanza.planetName}
-              </span>
-
-              {/* Stanza Subtitle */}
-              <p className="text-slate-400 font-mono text-xs uppercase tracking-widest mb-8">
-                {stanza.subtitle}
-              </p>
-
               {/* Poem Verses */}
-              <div className="flex flex-col items-center justify-center space-y-4 text-center z-10 my-6">
+              <div className="flex flex-col items-center justify-center space-y-4 text-center z-10 my-4">
                 {stanza.lines.map((line, i) => (
                   <p
                     key={i}
-                    className="font-serif text-lg sm:text-2xl text-slate-100 leading-relaxed tracking-wide selection:bg-amber-400 selection:text-slate-950"
+                    className="font-serif text-xl sm:text-3xl text-slate-100 leading-relaxed tracking-wide selection:bg-amber-400 selection:text-slate-950"
                   >
                     {line}
                   </p>
                 ))}
-              </div>
-
-              {/* Footer Quote */}
-              <div className="mt-8 pt-4 border-t border-slate-800/60 w-full flex items-center justify-between text-xs font-serif text-slate-400 italic">
-                <span>Stanza {idx + 1} of {POEM_STANZAS.length}</span>
-                <span>"Lo esencial es invisible a los ojos."</span>
               </div>
             </motion.div>
           </section>
         ))}
       </div>
 
-      {/* Footer Closing */}
-      <footer className="my-24 text-center flex flex-col items-center space-y-3">
-        <svg viewBox="0 0 100 100" className="w-8 h-8 text-amber-400 fill-current drop-shadow-[0_0_10px_rgba(250,204,21,0.5)]">
-          <polygon points="50,10 63,35 90,38 70,57 75,85 50,72 25,85 30,57 10,38 37,35" />
-        </svg>
-        <p className="font-serif text-slate-300 text-sm sm:text-base italic">
-          "Todas las personas mayores han sido niños antes. Pero pocas lo recuerdan."
+      {/* Footer Closing Quote */}
+      <footer className="my-20 text-center flex flex-col items-center space-y-3">
+        <p className="font-serif text-slate-400 text-sm sm:text-base italic">
+          "Lo esencial es invisible a los ojos."
         </p>
       </footer>
 
@@ -240,7 +213,7 @@ export const ConstellationPoemViewer: React.FC<ConstellationPoemViewerProps> = (
               <button
                 key={stanza.id}
                 onClick={() => scrollToStanza(idx)}
-                aria-label={`Scroll to ${stanza.planetName}`}
+                aria-label={`Scroll to stanza ${idx + 1}`}
                 className={`h-2.5 rounded-full transition-all duration-500 ${
                   isActive ? 'w-7 bg-amber-400 shadow-[0_0_10px_rgba(250,204,21,0.8)]' : 'w-2.5 bg-slate-700 hover:bg-slate-500'
                 }`}
