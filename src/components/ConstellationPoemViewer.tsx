@@ -45,18 +45,6 @@ const POEM_STANZAS: Stanza[] = [
       "y enseña al cielo a brillar."
     ],
     illustration: "desert"
-  },
-  {
-    id: 4,
-    planetName: "The Fox's Secret",
-    theme: "fox",
-    lines: [
-      "No hace falta buscar muy lejos",
-      "para saber lo especial que eres:",
-      "porque lo más bonito que tienes",
-      "siempre se siente con el corazón."
-    ],
-    illustration: "fox"
   }
 ];
 
@@ -211,7 +199,7 @@ export const ConstellationPoemViewer: React.FC<ConstellationPoemViewerProps> = (
           })}
         </div>
         <span className="text-[11px] font-mono text-amber-300 uppercase tracking-widest pl-2 border-l border-slate-800">
-          0{activeStanzaIndex + 1} / 04
+          0{activeStanzaIndex + 1} / 03
         </span>
       </div>
     </div>
