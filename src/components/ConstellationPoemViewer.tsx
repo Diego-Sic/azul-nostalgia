@@ -27,10 +27,10 @@ const POEM_STANZAS: Stanza[] = [
     planetName: "The Rose's Glass Dome",
     theme: "rose",
     lines: [
-      "No hay nada en todo el universo",
-      "que sea tan lindo como tu luz,",
-      "tan única entre cinco mil rosas,",
-      "simplemente por ser tú."
+      "De todas las curvas que existen,",
+      "tu sonrisa es la favorita del universo,",
+      "tan brillante y tan única",
+      "como una estrella en el cielo."
     ],
     illustration: "rose"
   },
@@ -51,10 +51,10 @@ const POEM_STANZAS: Stanza[] = [
     planetName: "The Fox's Secret",
     theme: "fox",
     lines: [
-      "Hay algo muy especial en ti",
-      "que nadie puede explicar:",
-      "que lo más bonito que tienes",
-      "con el corazón se puede ver."
+      "No hace falta buscar muy lejos",
+      "para saber lo especial que eres:",
+      "porque lo más bonito que tienes",
+      "siempre se siente con el corazón."
     ],
     illustration: "fox"
   }
