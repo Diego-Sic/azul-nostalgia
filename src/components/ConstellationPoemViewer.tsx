@@ -102,23 +102,12 @@ export const ConstellationPoemViewer: React.FC<ConstellationPoemViewerProps> = (
 
   return (
     <div className="flex flex-col items-center justify-center w-full min-h-screen px-4 py-12 max-w-2xl mx-auto z-20 relative">
-      {/* Title Header */}
-      <header className="flex flex-col items-center text-center my-16 sm:my-24 space-y-4">
-        <div className="flex items-center gap-2 px-4 py-1.5 rounded-full border border-amber-400/30 bg-slate-900/60 backdrop-blur-md">
-          <span className="w-2.5 h-2.5 rounded-full bg-amber-400 animate-pulse" />
-          <span className="text-amber-300 font-mono text-xs uppercase tracking-widest font-semibold">
-            Para Sofi
-          </span>
-        </div>
-        <h1 className="text-3xl sm:text-5xl font-serif text-slate-100 tracking-wide font-normal">
-          Un Viaje entre las Estrellas
-        </h1>
-
-        {/* Scroll Down Indicator */}
+      {/* Minimal Header Space & Scroll Down Indicator */}
+      <header className="flex flex-col items-center text-center my-12 sm:my-16">
         <motion.div
           animate={{ y: [0, 8, 0] }}
           transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
-          className="pt-8 text-amber-400/60"
+          className="pt-4 text-amber-400/60"
         >
           <svg viewBox="0 0 24 24" className="w-6 h-6 fill-none stroke-current stroke-2">
             <path d="M12 5 v14 M5 12 l7 7 l7 -7" strokeLinecap="round" strokeLinejoin="round" />
