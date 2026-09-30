@@ -107,7 +107,7 @@ export const ConstellationPoemViewer: React.FC<ConstellationPoemViewerProps> = (
         <div className="flex items-center gap-2 px-4 py-1.5 rounded-full border border-amber-400/30 bg-slate-900/60 backdrop-blur-md">
           <span className="w-2.5 h-2.5 rounded-full bg-amber-400 animate-pulse" />
           <span className="text-amber-300 font-mono text-xs uppercase tracking-widest font-semibold">
-            El Principito
+            Para Sofi
           </span>
         </div>
         <h1 className="text-3xl sm:text-5xl font-serif text-slate-100 tracking-wide font-normal">
