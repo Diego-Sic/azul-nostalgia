@@ -27,7 +27,7 @@ const POEM_STANZAS: Stanza[] = [
     planetName: "The Rose's Glass Dome",
     theme: "rose",
     lines: [
-      "De todas las curvas que existen,",
+      "De todas las curvas de tu cuerpo,",
       "tu sonrisa es la favorita del universo,",
       "tan brillante y tan única",
       "como una estrella en el cielo."
