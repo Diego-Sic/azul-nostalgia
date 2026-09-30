@@ -15,10 +15,10 @@ const POEM_STANZAS: Stanza[] = [
     planetName: "Asteroid B-612",
     theme: "b612",
     lines: [
-      "Lorem ipsum dolor sit amet,",
-      "consectetur adipiscing elit.",
-      "Sed do eiusmod tempor incididunt",
-      "ut labore et dolore magna aliqua."
+      "Todos los descubrimientos",
+      "tienen muchas ganas de encontrarte.",
+      "Hasta las estrellas usan telescopios",
+      "para buscarte."
     ],
     illustration: "b612"
   },
@@ -27,10 +27,10 @@ const POEM_STANZAS: Stanza[] = [
     planetName: "The Rose's Glass Dome",
     theme: "rose",
     lines: [
-      "Ut enim ad minim veniam,",
-      "quis nostrud exercitation ullamco",
-      "laboris nisi ut aliquip ex ea",
-      "commodo consequat duis aute."
+      "Los volcanes dormidos de mi asteroide",
+      "despiertan solo para alumbrar tu andar,",
+      "y hasta la rosa bajo su fanal de vidrio",
+      "aprende contigo a saber amar."
     ],
     illustration: "rose"
   },
@@ -39,10 +39,10 @@ const POEM_STANZAS: Stanza[] = [
     planetName: "The Golden Desert",
     theme: "sahara",
     lines: [
-      "Duis aute irure dolor in",
-      "reprehenderit in voluptate velit",
-      "esse cillum dolore eu fugiat",
-      "nulla pariatur excepteur sint."
+      "Cruzaría mil desiertos de arena dorada",
+      "buscando la fuente que oculta el erial,",
+      "porque en la inmensidad de esta galaxia",
+      "no existe un milagro que sea tan real."
     ],
     illustration: "desert"
   },
@@ -51,10 +51,10 @@ const POEM_STANZAS: Stanza[] = [
     planetName: "The Fox's Secret",
     theme: "fox",
     lines: [
-      "Occaecat cupidatat non proident,",
-      "sunt in culpa qui officia",
-      "deserunt mollit anim id est",
-      "laborum et dolorum fuga."
+      "Me has domesticado el alma en un instante,",
+      "un lazo único que nada puede romper:",
+      "que lo esencial permanece invisible,",
+      "y solo con el corazón se puede ver."
     ],
     illustration: "fox"
   }
