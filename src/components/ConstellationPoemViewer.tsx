@@ -27,10 +27,10 @@ const POEM_STANZAS: Stanza[] = [
     planetName: "The Rose's Glass Dome",
     theme: "rose",
     lines: [
-      "Los volcanes dormidos de mi asteroide",
-      "despiertan solo para alumbrar tu andar,",
-      "y hasta la rosa bajo su fanal de vidrio",
-      "aprende contigo a saber amar."
+      "No hay flor en ningún asteroide",
+      "que posea la gracia de tu luz,",
+      "tan única entre cinco mil rosas,",
+      "simplemente por ser tú."
     ],
     illustration: "rose"
   },
@@ -39,10 +39,10 @@ const POEM_STANZAS: Stanza[] = [
     planetName: "The Golden Desert",
     theme: "sahara",
     lines: [
-      "Cruzaría mil desiertos de arena dorada",
-      "buscando la fuente que oculta el erial,",
-      "porque en la inmensidad de esta galaxia",
-      "no existe un milagro que sea tan real."
+      "Haces que el desierto parezca un jardín",
+      "con solo tu forma de mirar,",
+      "como una constelación constante",
+      "que enseña al cielo a brillar."
     ],
     illustration: "desert"
   },
@@ -51,10 +51,10 @@ const POEM_STANZAS: Stanza[] = [
     planetName: "The Fox's Secret",
     theme: "fox",
     lines: [
-      "Me has domesticado el alma en un instante,",
-      "un lazo único que nada puede romper:",
-      "que lo esencial permanece invisible,",
-      "y solo con el corazón se puede ver."
+      "Hay una magia serena en tu presencia,",
+      "algo que el mundo no puede explicar:",
+      "que lo verdaderamente valioso",
+      "solo con el corazón se puede admirar."
     ],
     illustration: "fox"
   }
