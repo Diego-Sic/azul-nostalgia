@@ -1,7 +1,7 @@
 {
-  "name": "el-principito-cumpleanos",
+  "name": "azul-nostalgia",
   "version": "1.0.0",
-  "description": "Interactive Little Prince Birthday Experience",
+  "description": "El Principito - Poema Azul Nostalgia",
   "main": "index.js",
   "type": "module",
   "scripts": {
